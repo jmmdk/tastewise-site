@@ -21,19 +21,20 @@ export const legal = {
 <div class="tbl"><table>
 <tr><th>Data</th><th>Purpose</th><th>Legal basis (GDPR)</th></tr>
 <tr><td><b>Account data:</b> email address, or the identifier and (if you choose to share it) email from Sign in with Apple or Google Sign-In</td><td>Create and secure your account, send your 6-digit login code, restore your data on a new device</td><td>Contract (Art. 6(1)(b))</td></tr>
-<tr><td><b>Onboarding answers:</b> your goals, the foods you find hard, what makes eating difficult for you, meal times, preferred tone, theme and language</td><td>Build your personal plan, archetype and reminders and personalise the app</td><td>Contract (Art. 6(1)(b)). Because some answers can say something about your wellbeing, we also ask for your explicit consent (Art. 9(2)(a))</td></tr>
-<tr><td><b>Tasting data:</b> the foods you practise, steps completed, how you felt (for example calm or nervous), notes, challenges, streaks and milestones</td><td>Show your progress, taste profile and next steps</td><td>Contract (Art. 6(1)(b)) and explicit consent (Art. 9(2)(a))</td></tr>
+<tr><td><b>Onboarding answers:</b> your goals, the foods you find hard, what makes eating difficult for you, meal times, preferred tone, theme and language</td><td>Build your personal plan, archetype and reminders and personalise the app</td><td>Contract (Art. 6(1)(b)). You choose what to answer, and you can change or delete your answers at any time</td></tr>
+<tr><td><b>Tasting data:</b> the foods you practise, steps completed, how you felt (for example calm or nervous), notes, challenges, streaks and milestones</td><td>Show your progress, taste profile and next steps</td><td>Contract (Art. 6(1)(b))</td></tr>
 <tr><td><b>Purchase data:</b> subscription status, product, trial and renewal dates and an anonymous app user ID. We never see your card details</td><td>Give you access to Premium and restore purchases</td><td>Contract (Art. 6(1)(b))</td></tr>
 <tr><td><b>Usage analytics:</b> pseudonymous events such as screens viewed and features used, app version, device type, operating system, language and approximate country</td><td>Understand what works, fix problems and improve the app</td><td>Legitimate interest (Art. 6(1)(f)). Data is pseudonymous and stored in the EU. You can object at any time by emailing us</td></tr>
+<tr><td><b>Crash and error reports:</b> error messages and technical details about what went wrong, app version, device type and operating system, linked to your pseudonymous user ID</td><td>Find and fix bugs and keep the app stable</td><td>Legitimate interest (Art. 6(1)(f))</td></tr>
 <tr><td><b>Support emails</b> you send us</td><td>Answer your questions</td><td>Legitimate interest (Art. 6(1)(f))</td></tr>
 </table></div>
 <p>Reminders and Live Activities (meal-time missions) are created on your device. We do not use your location, contacts, photos, microphone or camera.</p>
 <h2>3. Service providers</h2>
 <p>We use carefully chosen providers (data processors) that only process data on our instructions and under a data processing agreement:</p>
 <ul>
-<li><b>Supabase</b> (database, login and hosting of your account, onboarding and tasting data)</li>
+<li><b>Supabase</b> (database, login and hosting of your account, onboarding and tasting data), hosted in the EU (Frankfurt, Germany)</li>
 <li><b>RevenueCat</b> (subscription management)</li>
-<li><b>PostHog</b>, EU cloud (product analytics)</li>
+<li><b>PostHog</b>, EU cloud (product analytics and crash/error reports)</li>
 <li><b>Resend</b> (sending login-code emails)</li>
 </ul>
 <p>When you sign in with Apple or Google, or buy a subscription through the App Store or Google Play, Apple and Google process your data under their own privacy policies.</p>
@@ -42,7 +43,7 @@ export const legal = {
 <h2>5. How long we keep data</h2>
 <ul>
 <li>Account, onboarding and tasting data: as long as you have an account. When you delete your account in the app, we delete the data within 30 days (backups are overwritten within a further 30 days).</li>
-<li>Analytics data: up to 24 months, after which it is deleted or anonymised.</li>
+<li>Analytics data and crash reports: up to 24 months, after which they are deleted or anonymised.</li>
 <li>Purchase records: as long as required by accounting law.</li>
 </ul>
 <h2>6. Your rights</h2>
@@ -110,19 +111,20 @@ export const legal = {
 <div class="tbl"><table>
 <tr><th>Oplysninger</th><th>Formål</th><th>Retsgrundlag (GDPR)</th></tr>
 <tr><td><b>Kontooplysninger:</b> e-mailadresse eller det id og (hvis du vælger at dele den) den e-mail, du får fra Log ind med Apple eller Google</td><td>Oprette og sikre din konto, sende din 6-cifrede login-kode og gendanne dine data på en ny enhed</td><td>Aftale (art. 6, stk. 1, litra b)</td></tr>
-<tr><td><b>Svar fra onboarding:</b> dine mål, den mad du synes er svær, hvad der gør det svært for dig at spise, spisetider, foretrukken tone, tema og sprog</td><td>Lave din personlige plan, arketype og påmindelser og tilpasse appen til dig</td><td>Aftale (art. 6, stk. 1, litra b). Fordi nogle svar kan sige noget om dit velbefindende, beder vi også om dit udtrykkelige samtykke (art. 9, stk. 2, litra a)</td></tr>
-<tr><td><b>Smagsdata:</b> de madvarer du øver, gennemførte skridt, hvordan du havde det (fx rolig eller nervøs), noter, udfordringer, streaks og milepæle</td><td>Vise dine fremskridt, din smagsprofil og dine næste skridt</td><td>Aftale (art. 6, stk. 1, litra b) og udtrykkeligt samtykke (art. 9, stk. 2, litra a)</td></tr>
+<tr><td><b>Svar fra onboarding:</b> dine mål, den mad du synes er svær, hvad der gør det svært for dig at spise, spisetider, foretrukken tone, tema og sprog</td><td>Lave din personlige plan, arketype og påmindelser og tilpasse appen til dig</td><td>Aftale (art. 6, stk. 1, litra b). Du vælger selv, hvad du svarer, og du kan altid ændre eller slette dine svar</td></tr>
+<tr><td><b>Smagsdata:</b> de madvarer du øver, gennemførte skridt, hvordan du havde det (fx rolig eller nervøs), noter, udfordringer, streaks og milepæle</td><td>Vise dine fremskridt, din smagsprofil og dine næste skridt</td><td>Aftale (art. 6, stk. 1, litra b)</td></tr>
 <tr><td><b>Købsoplysninger:</b> abonnementsstatus, produkt, datoer for prøveperiode og fornyelse samt et anonymt bruger-id. Vi ser aldrig dine kortoplysninger</td><td>Give dig adgang til Premium og gendanne køb</td><td>Aftale (art. 6, stk. 1, litra b)</td></tr>
 <tr><td><b>Brugsstatistik:</b> pseudonyme hændelser som viste skærme og brugte funktioner, appversion, enhedstype, styresystem, sprog og omtrentligt land</td><td>Forstå, hvad der virker, rette fejl og forbedre appen</td><td>Legitim interesse (art. 6, stk. 1, litra f). Dataene er pseudonyme og gemmes i EU. Du kan altid gøre indsigelse ved at skrive til os</td></tr>
+<tr><td><b>Fejl- og nedbrudsrapporter:</b> fejlbeskeder og tekniske detaljer om, hvad der gik galt, appversion, enhedstype og styresystem, knyttet til dit pseudonyme bruger-id</td><td>Finde og rette fejl og holde appen stabil</td><td>Legitim interesse (art. 6, stk. 1, litra f)</td></tr>
 <tr><td><b>Supportmails</b>, du sender til os</td><td>Besvare dine spørgsmål</td><td>Legitim interesse (art. 6, stk. 1, litra f)</td></tr>
 </table></div>
 <p>Påmindelser og Live Activities (missioner ved måltidet) oprettes på din enhed. Vi bruger ikke din placering, dine kontakter, billeder, mikrofon eller kamera.</p>
 <h2>3. Leverandører</h2>
 <p>Vi bruger nøje udvalgte leverandører (databehandlere), som kun behandler data efter vores instruks og under en databehandleraftale:</p>
 <ul>
-<li><b>Supabase</b> (database, login og hosting af din konto, onboarding- og smagsdata)</li>
+<li><b>Supabase</b> (database, login og hosting af din konto, onboarding- og smagsdata), hostet i EU (Frankfurt, Tyskland)</li>
 <li><b>RevenueCat</b> (håndtering af abonnementer)</li>
-<li><b>PostHog</b>, EU-cloud (produktstatistik)</li>
+<li><b>PostHog</b>, EU-cloud (produktstatistik og fejl- og nedbrudsrapporter)</li>
 <li><b>Resend</b> (afsendelse af e-mails med login-kode)</li>
 </ul>
 <p>Når du logger ind med Apple eller Google eller køber et abonnement via App Store eller Google Play, behandler Apple og Google dine data efter deres egne privatlivspolitikker.</p>
@@ -131,7 +133,7 @@ export const legal = {
 <h2>5. Hvor længe vi gemmer data</h2>
 <ul>
 <li>Konto-, onboarding- og smagsdata: så længe du har en konto. Når du sletter din konto i appen, sletter vi dataene inden for 30 dage (backups overskrives inden for yderligere 30 dage).</li>
-<li>Statistikdata: op til 24 måneder, hvorefter de slettes eller anonymiseres.</li>
+<li>Statistikdata og fejlrapporter: op til 24 måneder, hvorefter de slettes eller anonymiseres.</li>
 <li>Købsoplysninger: så længe bogføringsloven kræver det.</li>
 </ul>
 <h2>6. Dine rettigheder</h2>
