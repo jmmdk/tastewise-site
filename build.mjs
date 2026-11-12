@@ -1,5 +1,5 @@
 // Static site generator for gettastewise.com. Run: node build.mjs
-// Writes index.html (EN), da/index.html, privacy/, terms/, da/privacy/, da/terms/, 404.html, sitemap.xml, robots.txt.
+// Writes index.html (EN), da/index.html, privacy/, terms/, delete-account/ (+ da/ versions), 404.html, sitemap.xml, robots.txt.
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname } from 'node:path';
 import { content } from './src/content.mjs';
@@ -8,7 +8,7 @@ import { icons } from './src/icons.mjs';
 
 const SITE = 'https://gettastewise.com';
 const STORE = { ios: '#', android: '#' }; // replace with real store links when the app is live
-const LASTMOD = '2026-11-11';
+const LASTMOD = '2026-11-12';
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const strip = (s) => s.replace(/<[^>]+>/g, '');
 const write = (file, html) => { mkdirSync(dirname(file), { recursive: true }); writeFileSync(file, html); console.log('wrote', file); };
@@ -83,6 +83,7 @@ function footer(c) {
 <div><h4>${c.footer.legal}</h4><ul>
 <li><a href="${legalPath(c.lang, 'privacy')}">${c.footer.privacy}</a></li>
 <li><a href="${legalPath(c.lang, 'terms')}">${c.footer.terms}</a></li>
+<li><a href="${legalPath(c.lang, 'delete-account')}">${c.footer.deleteAccount}</a></li>
 <li><a href="${c.alt.path}" hreflang="${c.alt.lang}">${c.alt.label}</a></li></ul></div>
 <div><h4>${c.footer.contact}</h4><ul>
 <li><a href="mailto:hi@gettastewise.com">hi@gettastewise.com</a></li>
@@ -95,7 +96,7 @@ function landing(c) {
   const appLd = {
     '@context': 'https://schema.org', '@type': 'MobileApplication', name: 'Tastewise', operatingSystem: 'iOS, Android',
     applicationCategory: 'HealthApplication', description: c.description, url: SITE + c.path, inLanguage: c.lang,
-    image: `${SITE}/assets/img/icon-512.png`, offers: { '@type': 'Offer', price: '0', priceCurrency: 'DKK', description: c.lang === 'da' ? 'Gratis at hente. Premium-abonnement med 7 dages gratis prøve.' : 'Free download. Premium subscription with a 7-day free trial.' },
+    image: `${SITE}/assets/img/icon-512.png`, offers: { '@type': 'Offer', price: '0', priceCurrency: 'DKK', description: c.lang === 'da' ? 'Gratis at hente. Tastewise Pro-abonnement med 7 dages gratis prøve.' : 'Free download. Tastewise Pro subscription with a 7-day free trial.' },
     publisher: { '@id': `${SITE}/#org` },
   };
   const orgLd = { '@context': 'https://schema.org', '@type': 'Organization', '@id': `${SITE}/#org`, name: 'Useful Apps ApS', url: SITE, logo: `${SITE}/assets/img/icon-512.png`, email: 'hi@gettastewise.com', vatID: 'DK43969188', address: { '@type': 'PostalAddress', streetAddress: 'Staghøjvej 23A', postalCode: '8210', addressLocality: 'Aarhus V', addressCountry: 'DK' } };
@@ -195,6 +196,7 @@ for (const lang of ['en', 'da']) {
   write(`${base}index.html`, landing(c));
   write(`${base}privacy/index.html`, legalPage(c, 'privacy'));
   write(`${base}terms/index.html`, legalPage(c, 'terms'));
+  write(`${base}delete-account/index.html`, legalPage(c, 'delete-account'));
 }
 
 // 404
@@ -205,7 +207,7 @@ write('404.html', `${head({ c, title: 'Page not found – Tastewise', descriptio
 ${footer(c)}</body></html>
 `);
 
-const urls = [['/', '/da/'], ['/privacy/', '/da/privacy/'], ['/terms/', '/da/terms/']];
+const urls = [['/', '/da/'], ['/privacy/', '/da/privacy/'], ['/terms/', '/da/terms/'], ['/delete-account/', '/da/delete-account/']];
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urls.flatMap(([en, da]) => [en, da].map((u) => `<url><loc>${SITE}${u}</loc><lastmod>${LASTMOD}</lastmod>

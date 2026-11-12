@@ -3,8 +3,8 @@ const company = {
   name: 'Useful Apps ApS', street: 'Staghøjvej 23A', city: '8210 Aarhus V', countryEn: 'Denmark', countryDa: 'Danmark',
   cvr: 'DK43969188', email: 'hi@gettastewise.com',
 };
-const updatedEn = '11 November 2026';
-const updatedDa = '11. november 2026';
+const updatedEn = '12 November 2026';
+const updatedDa = '12. november 2026';
 const addrEn = `${company.name}, ${company.street}, ${company.city}, ${company.countryEn}. CVR: ${company.cvr}. Email: <a href="mailto:${company.email}">${company.email}</a>`;
 const addrDa = `${company.name}, ${company.street}, ${company.city}, ${company.countryDa}. CVR: ${company.cvr}. E-mail: <a href="mailto:${company.email}">${company.email}</a>`;
 
@@ -23,8 +23,8 @@ export const legal = {
 <tr><td><b>Account data:</b> email address, or the identifier and (if you choose to share it) email from Sign in with Apple or Google Sign-In</td><td>Create and secure your account, send your 6-digit login code, restore your data on a new device</td><td>Contract (Art. 6(1)(b))</td></tr>
 <tr><td><b>Onboarding answers:</b> your goals, the foods you find hard, what makes eating difficult for you, meal times, preferred tone, theme and language</td><td>Build your personal plan, archetype and reminders and personalise the app</td><td>Contract (Art. 6(1)(b)). You choose what to answer, and you can change or delete your answers at any time</td></tr>
 <tr><td><b>Tasting data:</b> the foods you practise, steps completed, how you felt (for example calm or nervous), notes, challenges, streaks and milestones</td><td>Show your progress, taste profile and next steps</td><td>Contract (Art. 6(1)(b))</td></tr>
-<tr><td><b>Purchase data:</b> subscription status, product, trial and renewal dates and an anonymous app user ID. We never see your card details</td><td>Give you access to Premium and restore purchases</td><td>Contract (Art. 6(1)(b))</td></tr>
-<tr><td><b>Usage analytics:</b> pseudonymous events such as screens viewed and features used, app version, device type, operating system, language and approximate country</td><td>Understand what works, fix problems and improve the app</td><td>Legitimate interest (Art. 6(1)(f)). Data is pseudonymous and stored in the EU. You can object at any time by emailing us</td></tr>
+<tr><td><b>Purchase data:</b> subscription status, product, trial and renewal dates and an anonymous app user ID. We never see your card details</td><td>Give you access to Tastewise Pro and restore purchases</td><td>Contract (Art. 6(1)(b))</td></tr>
+<tr><td><b>Usage analytics:</b> pseudonymous events such as screens viewed and features used, app version, device type, operating system and language (no location: IP-based location lookup is turned off)</td><td>Understand what works, fix problems and improve the app</td><td>Legitimate interest (Art. 6(1)(f)). Data is pseudonymous and stored in the EU. You can object at any time by emailing us</td></tr>
 <tr><td><b>Crash and error reports:</b> error messages and technical details about what went wrong, app version, device type and operating system, linked to your pseudonymous user ID</td><td>Find and fix bugs and keep the app stable</td><td>Legitimate interest (Art. 6(1)(f))</td></tr>
 <tr><td><b>Support emails</b> you send us</td><td>Answer your questions</td><td>Legitimate interest (Art. 6(1)(f))</td></tr>
 </table></div>
@@ -47,7 +47,7 @@ export const legal = {
 <li>Purchase records: as long as required by accounting law.</li>
 </ul>
 <h2>6. Your rights</h2>
-<p>You have the right to access, correct, delete and export your data, to restrict or object to processing, and to withdraw consent at any time (this does not affect processing that happened before). You can delete your account directly in the app under Profile, or email us at <a href="mailto:${company.email}">${company.email}</a>. You can also complain to the Danish Data Protection Agency (Datatilsynet), <a href="https://www.datatilsynet.dk" rel="noopener">datatilsynet.dk</a>, or to the authority in your own country.</p>
+<p>You have the right to access, correct, delete and export your data, to restrict or object to processing, and to withdraw consent at any time (this does not affect processing that happened before). You can delete your account directly in the app under Profile → Delete account, or email us at <a href="mailto:${company.email}">${company.email}</a>. See <a href="/delete-account/">how to delete your account</a>. You can also complain to the Danish Data Protection Agency (Datatilsynet), <a href="https://www.datatilsynet.dk" rel="noopener">datatilsynet.dk</a>, or to the authority in your own country.</p>
 <h2>7. Security</h2>
 <p>Data is encrypted in transit (HTTPS/TLS) and access is limited to people who need it. Login uses one-time codes or Apple/Google, so we never store a password for you.</p>
 <h2>8. Age</h2>
@@ -60,7 +60,7 @@ export const legal = {
 <p>${addrEn}</p>`,
     },
     terms: {
-      title: 'Terms of use', metaTitle: 'Terms of use – Tastewise', description: 'The terms that apply when you use the Tastewise app and subscribe to Tastewise Premium.',
+      title: 'Terms of use', metaTitle: 'Terms of use – Tastewise', description: 'The terms that apply when you use the Tastewise app and subscribe to Tastewise Pro.',
       html: `
 <p class="meta">Last updated: ${updatedEn}</p>
 <p>These terms apply when you use the Tastewise app (“the app”). The app is provided by ${addrEn}. By creating an account or using the app, you accept these terms.</p>
@@ -73,9 +73,9 @@ export const legal = {
 </ul>
 <h2>2. Who can use the app</h2>
 <p>You must be at least 18 years old. You are responsible for keeping access to your email or Apple/Google account secure.</p>
-<h2>3. Premium subscription</h2>
+<h2>3. Tastewise Pro subscription</h2>
 <ul>
-<li>Some features require Tastewise Premium. Premium is sold as an auto-renewing yearly or monthly subscription through the App Store or Google Play. Price and period are shown before you buy.</li>
+<li>Some features require Tastewise Pro. Tastewise Pro is sold as an auto-renewing yearly or monthly subscription through the App Store or Google Play. Price and period are shown before you buy.</li>
 <li>A free trial may be offered. If you do not cancel at least 24 hours before the trial ends, the subscription starts and you are charged.</li>
 <li>The subscription renews automatically unless you cancel at least 24 hours before the end of the current period. You manage and cancel it in your App Store or Google Play account settings. Deleting the app does not cancel the subscription.</li>
 <li>Payments, refunds and statutory withdrawal rights are handled by Apple or Google under their terms. By starting a subscription with immediate access, you agree that digital content is delivered right away.</li>
@@ -86,7 +86,7 @@ export const legal = {
 <h2>5. Our content</h2>
 <p>The app, its texts, illustrations, the turtle character and the Tastewise name belong to Useful Apps ApS or our licensors. You get a personal, non-transferable right to use the app for your own, non-commercial purposes.</p>
 <h2>6. Availability and changes</h2>
-<p>We work to keep the app running and improving, but we cannot guarantee that it is always available or error-free. We may change or remove features. If we discontinue Premium, we will give reasonable notice.</p>
+<p>We work to keep the app running and improving, but we cannot guarantee that it is always available or error-free. We may change or remove features. If we discontinue Tastewise Pro, we will give reasonable notice.</p>
 <h2>7. Liability</h2>
 <p>To the extent the law allows, we are not liable for indirect losses or for outcomes of food choices you make. Nothing in these terms limits liability that cannot be limited by law, including your mandatory rights as a consumer.</p>
 <h2>8. Ending the agreement</h2>
@@ -97,6 +97,39 @@ export const legal = {
 <p>We may update these terms. Material changes are announced in the app before they take effect.</p>
 <h2>11. Contact</h2>
 <p>${addrEn}</p>`,
+    },
+    'delete-account': {
+      title: 'Delete your Tastewise account', metaTitle: 'Delete your account – Tastewise', description: 'How to delete your Tastewise account and data, in the app or by email.',
+      html: `
+<p class="meta">Last updated: ${updatedEn}</p>
+<p>You can delete your Tastewise account and all the data in it at any time. This works the same whether you signed in with email, Apple or Google, or never signed in at all.</p>
+<h2>Delete your account in the app</h2>
+<ol>
+<li>Open Tastewise and tap <b>Profile</b> in the tab bar.</li>
+<li>Scroll to the bottom and tap <b>Delete account</b>.</li>
+<li>Read what will be deleted and tap <b>Delete my account</b>.</li>
+<li>Confirm with <b>Delete</b>.</li>
+</ol>
+<p>Your account is deleted right away, and the app starts over from the beginning.</p>
+<h2>No access to the app?</h2>
+<p>Email <a href="mailto:${company.email}?subject=Delete%20my%20Tastewise%20account">${company.email}</a> from the email address you use in Tastewise and ask us to delete your account. If you signed in with Apple or Google, tell us which one. We may ask you to confirm the request, and we delete the account within 30 days.</p>
+<h2>What is deleted</h2>
+<ul>
+<li>Your account and login (email address, and the link to Sign in with Apple or Google).</li>
+<li>Your onboarding answers, plan, food list and settings.</li>
+<li>Your tastings, streaks, challenges and progress.</li>
+<li>Everything Tastewise stores on your phone, including reminders and any Live Activity.</li>
+</ul>
+<h2>What is kept</h2>
+<ul>
+<li>Backups are overwritten within 30 days.</li>
+<li>Purchase records are kept as long as accounting law requires.</li>
+<li>Analytics data and crash reports are not linked to your name or email. They are deleted or anonymised after at most 24 months.</li>
+</ul>
+<h2>Cancel your subscription first</h2>
+<p>Deleting your account does not cancel a Tastewise Pro subscription. Cancel it in your <a href="https://apps.apple.com/account/subscriptions" rel="noopener">App Store subscriptions</a> or <a href="https://play.google.com/store/account/subscriptions" rel="noopener">Google Play subscriptions</a>, so you are not charged again. You can also tap <b>Manage subscription</b> on the delete screen in the app.</p>
+<p>Read more in our <a href="/privacy/">privacy policy</a>.</p>
+`,
     },
   },
   da: {
@@ -113,8 +146,8 @@ export const legal = {
 <tr><td><b>Kontooplysninger:</b> e-mailadresse eller det id og (hvis du vælger at dele den) den e-mail, du får fra Log ind med Apple eller Google</td><td>Oprette og sikre din konto, sende din 6-cifrede login-kode og gendanne dine data på en ny enhed</td><td>Aftale (art. 6, stk. 1, litra b)</td></tr>
 <tr><td><b>Svar fra onboarding:</b> dine mål, den mad du synes er svær, hvad der gør det svært for dig at spise, spisetider, foretrukken tone, tema og sprog</td><td>Lave din personlige plan, arketype og påmindelser og tilpasse appen til dig</td><td>Aftale (art. 6, stk. 1, litra b). Du vælger selv, hvad du svarer, og du kan altid ændre eller slette dine svar</td></tr>
 <tr><td><b>Smagsdata:</b> de madvarer du øver, gennemførte skridt, hvordan du havde det (fx rolig eller nervøs), noter, udfordringer, streaks og milepæle</td><td>Vise dine fremskridt, din smagsprofil og dine næste skridt</td><td>Aftale (art. 6, stk. 1, litra b)</td></tr>
-<tr><td><b>Købsoplysninger:</b> abonnementsstatus, produkt, datoer for prøveperiode og fornyelse samt et anonymt bruger-id. Vi ser aldrig dine kortoplysninger</td><td>Give dig adgang til Premium og gendanne køb</td><td>Aftale (art. 6, stk. 1, litra b)</td></tr>
-<tr><td><b>Brugsstatistik:</b> pseudonyme hændelser som viste skærme og brugte funktioner, appversion, enhedstype, styresystem, sprog og omtrentligt land</td><td>Forstå, hvad der virker, rette fejl og forbedre appen</td><td>Legitim interesse (art. 6, stk. 1, litra f). Dataene er pseudonyme og gemmes i EU. Du kan altid gøre indsigelse ved at skrive til os</td></tr>
+<tr><td><b>Købsoplysninger:</b> abonnementsstatus, produkt, datoer for prøveperiode og fornyelse samt et anonymt bruger-id. Vi ser aldrig dine kortoplysninger</td><td>Give dig adgang til Tastewise Pro og gendanne køb</td><td>Aftale (art. 6, stk. 1, litra b)</td></tr>
+<tr><td><b>Brugsstatistik:</b> pseudonyme hændelser som viste skærme og brugte funktioner, appversion, enhedstype, styresystem og sprog (ingen placering: opslag af placering ud fra IP-adresse er slået fra)</td><td>Forstå, hvad der virker, rette fejl og forbedre appen</td><td>Legitim interesse (art. 6, stk. 1, litra f). Dataene er pseudonyme og gemmes i EU. Du kan altid gøre indsigelse ved at skrive til os</td></tr>
 <tr><td><b>Fejl- og nedbrudsrapporter:</b> fejlbeskeder og tekniske detaljer om, hvad der gik galt, appversion, enhedstype og styresystem, knyttet til dit pseudonyme bruger-id</td><td>Finde og rette fejl og holde appen stabil</td><td>Legitim interesse (art. 6, stk. 1, litra f)</td></tr>
 <tr><td><b>Supportmails</b>, du sender til os</td><td>Besvare dine spørgsmål</td><td>Legitim interesse (art. 6, stk. 1, litra f)</td></tr>
 </table></div>
@@ -137,7 +170,7 @@ export const legal = {
 <li>Købsoplysninger: så længe bogføringsloven kræver det.</li>
 </ul>
 <h2>6. Dine rettigheder</h2>
-<p>Du har ret til indsigt, berigtigelse, sletning og dataportabilitet, til at begrænse eller gøre indsigelse mod behandlingen og til at trække dit samtykke tilbage når som helst (det påvirker ikke behandling, der er sket forinden). Du kan slette din konto direkte i appen under Profil eller skrive til <a href="mailto:${company.email}">${company.email}</a>. Du kan også klage til Datatilsynet, <a href="https://www.datatilsynet.dk" rel="noopener">datatilsynet.dk</a>.</p>
+<p>Du har ret til indsigt, berigtigelse, sletning og dataportabilitet, til at begrænse eller gøre indsigelse mod behandlingen og til at trække dit samtykke tilbage når som helst (det påvirker ikke behandling, der er sket forinden). Du kan slette din konto direkte i appen under Profil → Slet konto eller skrive til <a href="mailto:${company.email}">${company.email}</a>. Se <a href="/da/delete-account/">sådan sletter du din konto</a>. Du kan også klage til Datatilsynet, <a href="https://www.datatilsynet.dk" rel="noopener">datatilsynet.dk</a>.</p>
 <h2>7. Sikkerhed</h2>
 <p>Data krypteres under overførsel (HTTPS/TLS), og adgangen er begrænset til dem, der har brug for den. Login sker med engangskoder eller Apple/Google, så vi gemmer aldrig en adgangskode for dig.</p>
 <h2>8. Alder</h2>
@@ -150,7 +183,7 @@ export const legal = {
 <p>${addrDa}</p>`,
     },
     terms: {
-      title: 'Vilkår', metaTitle: 'Vilkår – Tastewise', description: 'De vilkår, der gælder, når du bruger appen Tastewise og abonnerer på Tastewise Premium.',
+      title: 'Vilkår', metaTitle: 'Vilkår – Tastewise', description: 'De vilkår, der gælder, når du bruger appen Tastewise og abonnerer på Tastewise Pro.',
       html: `
 <p class="meta">Senest opdateret: ${updatedDa}</p>
 <p>Disse vilkår gælder, når du bruger appen Tastewise (“appen”). Appen leveres af ${addrDa}. Når du opretter en konto eller bruger appen, accepterer du vilkårene.</p>
@@ -163,9 +196,9 @@ export const legal = {
 </ul>
 <h2>2. Hvem kan bruge appen</h2>
 <p>Du skal være mindst 18 år. Du er selv ansvarlig for at holde adgangen til din e-mail eller din Apple- eller Google-konto sikker.</p>
-<h2>3. Premium-abonnement</h2>
+<h2>3. Tastewise Pro-abonnement</h2>
 <ul>
-<li>Nogle funktioner kræver Tastewise Premium. Premium sælges som et automatisk fornyet års- eller månedsabonnement via App Store eller Google Play. Pris og periode vises, før du køber.</li>
+<li>Nogle funktioner kræver Tastewise Pro. Tastewise Pro sælges som et automatisk fornyet års- eller månedsabonnement via App Store eller Google Play. Pris og periode vises, før du køber.</li>
 <li>Der kan være en gratis prøveperiode. Hvis du ikke opsiger senest 24 timer før prøveperioden slutter, starter abonnementet, og du bliver opkrævet.</li>
 <li>Abonnementet fornyes automatisk, medmindre du opsiger senest 24 timer før den aktuelle periode udløber. Du styrer og opsiger det i dine kontoindstillinger i App Store eller Google Play. Det opsiger ikke abonnementet at slette appen.</li>
 <li>Betaling, refusion og lovbestemt fortrydelsesret håndteres af Apple eller Google efter deres vilkår. Når du starter et abonnement med adgang med det samme, accepterer du, at det digitale indhold leveres med det samme.</li>
@@ -176,7 +209,7 @@ export const legal = {
 <h2>5. Vores indhold</h2>
 <p>Appen, dens tekster, illustrationer, skildpadden og navnet Tastewise tilhører Useful Apps ApS eller vores licensgivere. Du får en personlig ret, der ikke kan overdrages, til at bruge appen til dine egne, ikke-kommercielle formål.</p>
 <h2>6. Tilgængelighed og ændringer</h2>
-<p>Vi arbejder for, at appen kører og bliver bedre, men vi kan ikke garantere, at den altid er tilgængelig eller fejlfri. Vi kan ændre eller fjerne funktioner. Hvis vi lukker Premium, giver vi rimeligt varsel.</p>
+<p>Vi arbejder for, at appen kører og bliver bedre, men vi kan ikke garantere, at den altid er tilgængelig eller fejlfri. Vi kan ændre eller fjerne funktioner. Hvis vi lukker Tastewise Pro, giver vi rimeligt varsel.</p>
 <h2>7. Ansvar</h2>
 <p>I det omfang loven tillader det, er vi ikke ansvarlige for indirekte tab eller for følgerne af de madvalg, du træffer. Intet i vilkårene begrænser ansvar, som ikke kan begrænses efter loven, herunder dine ufravigelige rettigheder som forbruger.</p>
 <h2>8. Ophør</h2>
@@ -187,6 +220,39 @@ export const legal = {
 <p>Vi kan opdatere vilkårene. Væsentlige ændringer meddeles i appen, før de træder i kraft.</p>
 <h2>11. Kontakt</h2>
 <p>${addrDa}</p>`,
+    },
+    'delete-account': {
+      title: 'Slet din Tastewise-konto', metaTitle: 'Slet din konto – Tastewise', description: 'Sådan sletter du din Tastewise-konto og dine data, i appen eller på e-mail.',
+      html: `
+<p class="meta">Senest opdateret: ${updatedDa}</p>
+<p>Du kan til enhver tid slette din Tastewise-konto og alle data i den. Det virker på samme måde, uanset om du er logget ind med e-mail, Apple eller Google, eller aldrig har logget ind.</p>
+<h2>Slet din konto i appen</h2>
+<ol>
+<li>Åbn Tastewise, og tryk på <b>Profil</b> i menuen forneden.</li>
+<li>Rul ned til bunden, og tryk på <b>Slet konto</b>.</li>
+<li>Læs, hvad der bliver slettet, og tryk på <b>Slet min konto</b>.</li>
+<li>Bekræft med <b>Slet</b>.</li>
+</ol>
+<p>Din konto bliver slettet med det samme, og appen starter forfra.</p>
+<h2>Har du ikke adgang til appen?</h2>
+<p>Skriv til <a href="mailto:${company.email}?subject=Slet%20min%20Tastewise-konto">${company.email}</a> fra den e-mailadresse, du bruger i Tastewise, og bed os slette din konto. Hvis du er logget ind med Apple eller Google, så skriv hvilken. Vi kan bede dig bekræfte anmodningen, og vi sletter kontoen inden for 30 dage.</p>
+<h2>Det bliver slettet</h2>
+<ul>
+<li>Din konto og dit login (e-mailadresse og koblingen til Log ind med Apple eller Google).</li>
+<li>Dine svar fra opstarten, din plan, din madliste og dine indstillinger.</li>
+<li>Dine smagninger, streaks, udfordringer og fremskridt.</li>
+<li>Alt, hvad Tastewise gemmer på din telefon, også påmindelser og Live Activity.</li>
+</ul>
+<h2>Det bliver gemt</h2>
+<ul>
+<li>Backups overskrives inden for 30 dage.</li>
+<li>Købsoplysninger gemmes, så længe bogføringsloven kræver det.</li>
+<li>Statistikdata og fejlrapporter er ikke koblet til dit navn eller din e-mail. De slettes eller anonymiseres efter højst 24 måneder.</li>
+</ul>
+<h2>Opsig dit abonnement først</h2>
+<p>Dit Tastewise Pro-abonnement stopper ikke, når du sletter kontoen. Opsig det under <a href="https://apps.apple.com/account/subscriptions" rel="noopener">abonnementer i App Store</a> eller <a href="https://play.google.com/store/account/subscriptions" rel="noopener">abonnementer i Google Play</a>, så du ikke bliver trukket igen. Du kan også trykke på <b>Administrer abonnement</b> på sletteskærmen i appen.</p>
+<p>Læs mere i vores <a href="/da/privacy/">privatlivspolitik</a>.</p>
+`,
     },
   },
 };
